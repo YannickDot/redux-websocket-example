@@ -1,0 +1,44 @@
+{
+  "name": "redux-websocket-example",
+  "version": "1.0.0",
+  "description": "An example using WebSockets inside a Redux-powered JavaScript app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "cpy 'app/src/index.html' app/dist",
+    "start": "npm run prepare && npm run dev",
+    "dev": "HOT=1 webpack-dev-server --devtool eval --progress --colors --content-base app/dist/",
+    "hot": "HOT=1 node server.js",
+    "build_app": "BUILD_APP=1 webpack ./app/src/js/app.js"
+  },
+  "dependencies": {
+    "object-assign": "^2.1.1",
+    "react": "^0.13.3",
+    "react-redux": "^2.0.0",
+    "react-router": "^0.13.3",
+    "redux": "^2.0.0",
+    "redux-thunk": "^0.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^5.6.7",
+    "babel-loader": "^5.1.4",
+    "babel-runtime": "^5.6.7",
+    "react-hot-loader": "^1.3.0",
+    "redux-devtools": "^2.0.0",
+    "webpack": "^1.9.12",
+    "webpack-dev-server": "^1.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YannickDot/redux-websocket-example.git"
+  },
+  "keywords": [
+    "Redux"
+  ],
+  "author": "YannickDot",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/YannickDot/redux-websocket-example/issues"
+  },
+  "homepage": "https://github.com/YannickDot/redux-websocket-example#readme"
+}
